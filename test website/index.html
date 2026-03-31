@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-SicBo | Premium Betting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Cyber-SicBo</div>
+        <div class="user-info">
+            <div class="wallet">VND: <span id="balance">1,000,000</span></div>
+            <button class="btn-action btn-deposit">NẠP TIỀN</button>
+            <div class="avatar"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="game-area">
+            <div class="history-bar" id="history"></div>
+
+            <div class="dice-table">
+                <div class="timer" id="timer">30</div>
+                <div class="dice-container" id="dice-container">
+                    <div class="dice">?</div>
+                    <div class="dice">?</div>
+                    <div class="dice">?</div>
+                </div>
+                <div id="result-text" class="status-text">Đang đợi đặt cược...</div>
+            </div>
+
+            <div class="bet-controls">
+                <div class="bet-box bet-tai" id="bet-tai-zone">
+                    <h2>TÀI</h2>
+                    <p>11 - 18</p>
+                    <div class="quick-bet">
+                        <button class="btn-amount" data-amount="10000">10k</button>
+                        <button class="btn-amount" data-amount="50000">50k</button>
+                        <button class="btn-amount" data-amount="100000">100k</button>
+                    </div>
+                </div>
+                <div class="bet-box bet-xiu" id="bet-xiu-zone">
+                    <h2>XỈU</h2>
+                    <p>3 - 10</p>
+                    <div class="quick-bet">
+                        <button class="btn-amount" data-amount="10000">10k</button>
+                        <button class="btn-amount" data-amount="50000">50k</button>
+                        <button class="btn-amount" data-amount="100000">100k</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bet-info">
+                Đang cược: <span id="current-bet-side">Chưa chọn</span> - 
+                Số tiền: <span id="current-bet-amount">0</span> VND
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="panel">
+                <div class="panel-header">BẢNG XẾP HẠNG NGÀY</div>
+                <div class="panel-content">
+                    <div class="rank-item">🥇 <b>Player_99</b>: +50M</div>
+                    <div class="rank-item">🥈 <b>CryptoKing</b>: +32M</div>
+                    <div class="rank-item">🥉 <b>GenZ_Bet</b>: +12M</div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">BOX CHAT TRỰC TUYẾN</div>
+                <div class="chat-messages" id="chat-box">
+                    <div class="chat-item"><span class="system-msg">Hệ thống:</span> Chào mừng bạn!</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input-field" placeholder="Nhập nội dung...">
+                    <button class="btn-send">Gửi</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
